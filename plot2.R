@@ -14,7 +14,8 @@ hpcFeb$DateTime[1]
 head(hpcFeb$DateTime)
 
 ## Plot2
-plot(hpcFeb$DateTime,hpcFeb$Global_active_power,type="1", xlab="", ylab="Global Active Power (kilowatts)")
+par(mfrow=c(1,1))
+with(hpcFeb,plot(Global_active_power~DateTime, type="l",ylab="Global Active Power (kilowatts)", xlab="") )
 
 ## Save the plot to plot1.png file
 dev.copy(png,file="plot2.png",height=480,width=480)
